@@ -1,0 +1,206 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #212121;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-header {
+    float: left;
+}
+
+.navbar-brand {
+    font-size: 30px;
+}
+
+.navbar-brand:hover {
+    color: yellow;
+}
+
+.navbar-nav {
+    float: right;
+}
+
+.navbar-btn {
+    float: right;
+    font-size: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 1.5em;
+    height: 40px;
+}
+
+.navbar-nav li>a.active {
+    background-color: lightskyblue;
+    border-radius: 60px;
+    ;
+    color: white;
+}
+
+.navbar-nav li>a.inactive {
+    background-color: #212121;
+}
+
+.navbar {
+    padding: 20px;
+    font-family: VT323, monospace;
+    font-size: 25px;
+}
+
+.navbar-nav a:hover {
+    color: #2fcbef;
+}
+
+.fa-instagram:hover {
+    color: #d62976 !important;
+    transform: scale(1.5);
+}
+
+.fa-linkedin:hover {
+    color: #0A66C2 !important;
+    transform: scale(1.5);
+}
+
+.fa-twitter:hover {
+    color: #1DA1F2 !important;
+    transform: scale(1.5);
+}
+
+.fa-github:hover {
+    color: white !important;
+    transform: scale(1.5);
+}
+
+.nav-link:hover {
+    color: dodgerblue;
+    text-decoration: none;
+}
+
+.content {
+    color: white;
+    padding-top: 50px;
+}
+
+footer {
+    color: white;
+    flex-shrink: 0;
+    padding: 10px;
+    font-family: VT323, monospace;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.footer-navbar {
+    min-height: 70px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer-nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    font-family: VT323, monospace;
+    font-size: 25px;
+}
+
+.social-links {
+    padding: 5px;
+}
+
+#my-role {
+    color: darkviolet;
+}
+
+.contact-btn {
+    font-family: VT323, monospace;
+    background-color: #2fcbef;
+    font-size: 22px;
+    margin-top: 5px;
+    margin-bottom: 50px;
+    padding: 15px 40px;
+    color: white;
+}
+
+.contact-btn:hover {
+    background-color: violet;
+}
+
+.contact-section {
+    text-align: center;
+    font-family: VT323, monospace;
+    margin-top: 50px;
+}
+
+#contact-start {
+    color: violet;
+    font-size: 30px;
+
+}
+
+.contact-head {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.contact-head span {
+    font-family: VT323, monospace;
+    font-size: 70px;
+    color: #ffffff;
+}
+
+.contact-head p {
+    font-family: VT323, monospace;
+    font-size: 20px;
+    color: #e6db74;
+    overflow-wrap: break-word;
+    max-width: 580px;
+    display: inline-block;
+}
+
+::placeholder {
+    color: #9a99ff;
+    font-size: 23px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 20px;
+    margin: 20px;
+    width: 1200px;
+    background-color: #212121;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    font-family: VT323,monospace;
+    resize: none;
+    color: white;
+    font-size: 20px;
+}
