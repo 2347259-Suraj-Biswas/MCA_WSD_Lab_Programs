@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="product.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<products>
+  <product id="A123">
+    <name>Iphone</name>
+    <price>500</price>
+    <quantity>300</quantity>
+    <category>Electronics</category>
+  </product>
+  <product id="A456">
+    <name>Polo Shirt</name>
+    <price>15.99</price>
+    <quantity>1000</quantity>
+    <category>Clothing</category>
+  </product>
+  <product id="A789">
+    <name>The Great Gatsby</name>
+    <price>9.99</price>
+    <quantity>50</quantity>
+    <category>Books</category>
+  </product>
+</products>
