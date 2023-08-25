@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.card{
+  align-items: center;
+}
+.footer{
+    align-content: center;
+    justify-content: center;
+    display: inline-flex;
+}
+.footer ul a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
