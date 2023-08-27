@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="product_schema.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<products>
+  <product>
+    <id>1</id>
+    <name>Laptop</name>
+    <price>999.99</price>
+    <description>Powerful laptop with great features.</description>
+  </product>
+  <product>
+    <id>2</id>
+    <name>Smartphone</name>
+    <price>499.99</price>
+    <description>Advanced smartphone with high-resolution camera.</description>
+  </product>
+  <product>
+    <id>3</id>
+    <name>Tablet</name>
+    <price>299.99</price>
+    <description>Portable tablet for work and entertainment.</description>
+  </product>
+  <product>
+    <id>4</id>
+    <name>Headphones</name>
+    <price>79.99</price>
+    <description>High-quality headphones for immersive audio experience.</description>
+  </product>
+  <product>
+    <id>5</id>
+    <name>Monitor</name>
+    <price>349.99</price>
+    <description>Large monitor for enhanced productivity.</description>
+  </product>
+  <product>
+    <id>6</id>
+    <name>Keyboard</name>
+    <price>49.99</price>
+    <description>Mechanical keyboard with customizable RGB lighting.</description>
+  </product>
+  <product>
+    <id>7</id>
+    <name>Mouse</name>
+    <price>29.99</price>
+    <description>High-precision gaming mouse with adjustable DPI.</description>
+  </product>
+  <product>
+    <id>8</id>
+    <name>External Hard Drive</name>
+    <price>129.99</price>
+    <description>1TB external hard drive for data storage.</description>
+  </product>
+  <product>
+    <id>9</id>
+    <name>Wireless Earbuds</name>
+    <price>99.99</price>
+    <description>True wireless earbuds with noise cancellation.</description>
+  </product>
+  <product>
+    <id>10</id>
+    <name>Camera</name>
+    <price>699.99</price>
+    <description>High-resolution camera for photography and video recording.</description>
+  </product>
+</products>
+
+  
