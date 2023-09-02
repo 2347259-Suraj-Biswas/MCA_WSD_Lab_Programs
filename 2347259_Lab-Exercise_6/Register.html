@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="./register.css">
+    <style>
+        .center-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .registration-form {
+            max-width: 500px;
+            box-shadow: 10px 10px darkorange;
+            width: 100%;
+            padding: 20px;
+            border-style: inset;
+            border-radius: 30px;
+            padding: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center-form">
+        <form class="registration-form" id="registration-form" action="#" method="post">
+            <h1 style="text-align: center;">Registration Form</h1>
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter your full name..." oninput="checkFullName()"/>   
+                    <i class="fa fa-check-circle"></i>
+                    <i class="fa fa-exclamation-circle"></i>
+                    <small>Error message</small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="abc@gmail.com" oninput="checkEmail()" />
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="password..." oninput="checkPassword()"/>
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"  placeholder="confirm password..." oninput="checkConfirmPassword()"/>
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth(DOB):</label>
+                <input type="text" class="form-control" id="dob" name="dob" placeholder="YYYY-MM-DD..." oninput="checkDOB()"/>
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" id="submitBtn">Register</button>
+        </form>
+    </div>
+
+    <script src="./validate.js"></script>
+</body>
+
+</html>
