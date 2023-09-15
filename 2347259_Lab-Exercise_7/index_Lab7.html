@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Exercise-7</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+        }
+
+        .container {
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        table {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>"Lab Exercise-7"</h1>
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Book Name</th>
+                </tr>
+            </thead>
+            <tbody id="bookList">
+            </tbody>
+        </table>
+        <div class="btn-container">
+            <button type="button" class="btn btn-primary" id="fetchBooks">Fetch Books</button>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById('fetchBooks').addEventListener('click', function () {
+        fetch('https://www.anapioficeandfire.com/api/books')
+            .then(response => response.json())
+            .then(data => {
+                displayBooks(data);
+            })
+            .catch(error => console.error('Error fetching books:', error));
+    });
+
+    function displayBooks(books) {
+        const bookList = document.getElementById('bookList');
+        bookList.innerHTML = '';
+
+        books.forEach(book => {
+            const row = bookList.insertRow();
+            const cell = row.insertCell(0);
+            cell.textContent = book.name;
+        });
+    }
+</script>
+
+</html>
