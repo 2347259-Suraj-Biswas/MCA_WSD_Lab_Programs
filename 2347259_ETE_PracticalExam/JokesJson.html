@@ -17,10 +17,9 @@
     </table>
     <script>
         let tbl1 = document.getElementById("fetchTable");
-        let btnFetch = document.getElementById("fetchProducts");
-
+        
         document.addEventListener("DOMContentLoaded", ()=>{
-            fetch("products.json")
+            fetch("jokes.json")
             .then(res => res.json())
             .then(res =>{
                 res.forEach(data => {
