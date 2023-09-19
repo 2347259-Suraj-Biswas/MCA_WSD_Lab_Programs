@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokes</title>
+</head>
+
+<body>
+    <h1>Jokes</h1>
+    <table id="fetchTable" style="border-style: solid;border-collapse: collapse;">
+        <tr>
+            <th>Category</th>
+            <th>Jokes</th>
+        </tr>
+    </table>
+    <script>
+        let tbl1 = document.getElementById("fetchTable");
+        let btnFetch = document.getElementById("fetchProducts");
+
+        document.addEventListener("DOMContentLoaded", ()=>{
+            fetch("products.json")
+            .then(res => res.json())
+            .then(res =>{
+                res.forEach(data => {
+                      tbl1.innerHTML += `
+                        <tr>
+                            <td>${data.Category}</td>
+                            <td>${data.Joke}</td>
+                        </tr>`;
+                });
+            })
+        });
+    </script>
+</body>
+
+</html>

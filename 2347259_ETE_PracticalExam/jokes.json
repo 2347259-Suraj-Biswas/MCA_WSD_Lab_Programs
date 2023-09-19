@@ -1,0 +1,46 @@
+[
+    {
+        "Category": "Programming",
+        "Joke": "Why don't scientists trust atoms? Because they make up everything!"
+    },
+    {
+        "Category": "Animal Crossing",
+        "Joke": "Parallel lines have so much in common. It's a shame they'll never meet."
+    },
+    {
+        "Category": "Religion",
+        "Joke" : "I used to play piano by ear, but now I use my hands."
+    },
+    {
+        "Category": "Political",
+        "Joke": "Did you hear about the mathematician who's afraid of negative numbers? He'll stop at nothing to avoid them."
+    },
+    {
+        "Category": "Food",
+        "Joke": "What do you call a fish with no eyes? Fsh."
+    },
+    {
+        "Category": "Geography",
+        "Joke": "I'm on a seafood diet. I see food, and I eat it."
+    },
+    {
+        "Category": "Celebrity",
+        "Joke": "Why did the scarecrow win an award? Because he was outstanding in his field!"
+    },
+    {
+        "Category": "Spooky",
+        "Joke": "What's orange and sounds like a parrot? A carrot."
+    },
+    {
+        "Category": "Miscellaneous",
+        "Joke": "How do you organize a space party? You \"planet\"!"
+    },
+    {
+        "Category": "Math Movies",
+        "Joke": "How does a penguin build its house? Igloos it together!"
+    },
+    {
+        "Category": "Miscellaneous",
+        "Joke": "Why did the bicycle fall over? Because it was two-tired."
+    }
+]
