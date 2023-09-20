@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .product {
+            border-bottom: 1px solid #ccc; 
+            padding-bottom: 10px; 
+            margin-bottom: 10px; 
+            display: flex; 
+        }
+
+        .product img {
+            max-width: 150px;
+            margin-right: 10px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1 class="text-center">Product Catalog</h1>
+
+                <!-- Search Bar -->
+                <div class="form-group">
+                    <input type="text" class="form-control" id="searchInput" placeholder="Search products...">
+                </div>
+                
+                <!-- Sorting Options -->
+                <div class="form-group">
+                    <label for="sortBy">Sort by:</label>
+                    <select class="form-control" id="sortBy">
+                        <option value="name">Name</option>
+                        <option value="price">Price</option>
+                    </select>
+                </div>
+
+                <!-- Product List -->
+                <div id="productList"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        const productList = document.getElementById('productList');
+        const searchInput = document.getElementById('searchInput');
+        const sortBySelect = document.getElementById('sortBy');
+
+        let products = [];
+
+        function fetchProducts() {
+            fetch('https://raw.githubusercontent.com/CynthiaEstherMetilda/Xhrdemo/main/products.json')
+                .then(response => response.json())
+                .then(data => {
+                    products = data;
+                    displayProducts();
+                })
+                .catch(error => console.error('Error fetching products:', error));
+        }
+
+        function displayProducts() {
+            productList.innerHTML = '';
+
+            const searchTerm = searchInput.value.toLowerCase();
+            const sortBy = sortBySelect.value;
+
+            const filteredProducts = products.filter(product => {
+                return product.name.toLowerCase().includes(searchTerm);
+            });
+
+            filteredProducts.sort((a, b) => {
+                if (sortBy === 'name') {
+                    return a.name.localeCompare(b.name);
+                } else if (sortBy === 'price') {
+                    return a.price - b.price;
+                }
+            });
+
+            filteredProducts.forEach(product => {
+                const productDiv = document.createElement('div');
+                productDiv.className = 'product';
+
+                const productImage = document.createElement('img');
+                productImage.src = product.image;
+                productImage.alt = product.name;
+
+                const productInfoDiv = document.createElement('div');
+                productInfoDiv.className = 'product-info';
+
+                const productName = document.createElement('h2');
+                productName.textContent = product.name;
+
+                const productDescription = document.createElement('p');
+                productDescription.textContent = product.description;
+
+                const productPrice = document.createElement('p');
+                productPrice.textContent = `Price: $${product.price}`;
+
+                productInfoDiv.appendChild(productName);
+                productInfoDiv.appendChild(productDescription);
+                productInfoDiv.appendChild(productPrice);
+
+                productDiv.appendChild(productImage);
+                productDiv.appendChild(productInfoDiv);
+
+                productList.appendChild(productDiv);
+            });
+        }
+
+        searchInput.addEventListener('input', displayProducts);
+        sortBySelect.addEventListener('change', displayProducts);
+
+        fetchProducts();
+    </script>
+</body>
+</html>
