@@ -1,0 +1,96 @@
+body{
+  background-color: wheat;
+}
+.app{
+  text-align: center;
+  font-family:fantasy;
+}
+.app h1{
+  color: rgb(181, 12, 12);
+}
+input{
+  border-radius: 10px;
+  padding: 15px;
+  width: 50%;
+}
+nav{
+  text-align: center;
+}
+nav a{
+  text-decoration: none;
+}
+nav li{
+  list-style: none;
+  display: inline;
+}
+a{
+  padding: 15px;
+  color: #343739;
+}
+a:hover{
+  color: rgb(181, 12, 12)
+}
+
+.search img {
+  width: 35px;
+  height: 35px;
+  margin-bottom: -13px;
+  margin-left: -45px;
+  cursor: pointer;
+}
+.container {
+  width: 100%;
+  margin-top: 3rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.movie {
+  width: 310px;
+  height: 460px;
+  margin: 1.5rem;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+
+}
+.movie:hover {
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05, 1.05);
+  cursor: pointer;
+}
+
+.movie div:nth-of-type(2) img {
+  height: 100%;
+  width: 100%;
+}
+
+.movie div:nth-of-type(3) {
+  z-index: 2;
+  background-color: #343739;
+  padding: 16px 24px 24px 24px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.movie div:nth-of-type(3) span {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #f0f0f0;
+}
+
+.movie div:nth-of-type(3) h3 {
+  margin-top: 5px;
+  font-family: "Roboto Slab", serif;
+  color: #f9d3b4;
+}
+
+
