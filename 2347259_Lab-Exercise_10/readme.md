@@ -1,0 +1,1 @@
+How can you create a Single Page Application (SPA) similar to https://filmpire.netlify.app/ (simplified) using React JS, and integrate it with the https://omdbapi.com/ API to fetch movie details and display them on the application?
