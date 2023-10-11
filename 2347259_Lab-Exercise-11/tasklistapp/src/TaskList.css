@@ -1,0 +1,59 @@
+.task-list {
+    width: 50%; 
+    height: max-content;
+    margin: 0 auto; 
+    padding: 20px;
+    border-radius: 10px 0px 0px 10px; 
+    background-color: #f7f7f7; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  .input-task{
+    padding: 10.5px;
+    width: 300px;
+    margin: 10px;
+    margin-right: 0px;
+    border-radius: 10px 0px 0px 10px;
+  }
+  
+  .task-list .btnadd {
+    padding: 11.9px;
+    width: 80px;
+    margin-left: -3px;
+    border-radius: 1px 10px 10px 0px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .task-list .btnadd:hover {
+    background-color: #0056b3;
+  }
+  ul{
+    list-style-type: none;
+  }
+  .btn-save{
+    padding: 5px;
+    border-radius: 5px;
+    width: 50px;
+    color: white;
+    background-color: black;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  .input-edit{
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .btn-edit, .btn-delete{
+    padding: 5px;
+    border-radius: 5px;
+    width: 50px;
+    color: white;
+    background-color: black;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  .ul-list{
+    margin-bottom: 10px;
+  }
